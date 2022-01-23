@@ -1,4 +1,8 @@
+spring.main.allow-circular-references: true
+
 spring:
+  application:
+    name: Best Read
   security:
     oauth2:
       client:
@@ -6,3 +10,25 @@ spring:
           github:
             client-id: Iv1.9839dad2b24e46a1
             client-secret: cc3ca26377162d7609759a48ffe6cdfb987b71dc
+  data:
+    cassandra:
+      keyspace-name: mainread
+      username: fAAAmENZbCmAWjlrcHabdwKP
+      password: 3OmMKLD5Z+oiRrNowWzFCLzQ7YL1TNytpyLR,MNJD6Zij0roXko04m+X,,WaLncSm9KbAoZGDgosLOpePKlThYUi_nW-qpNJHUz0DWx9KIrL1fIfyo888lAZCoRrEWoR
+      schema-action: create-if-not-exists
+      request:
+        timeout: 10s
+
+datastax.astra:
+  secure-connect-bundle: secure-connect-bestreads.zip
+
+astra.db:
+  id: b47d5368-c9b5-4f8f-a976-213e1f079826
+  region: asia-south1
+  keyspace: mainread
+  application.token: AstraCS:fAAAmENZbCmAWjlrcHabdwKP:411c41a4dc79c03327a593c1822d373086f0400c2713b91b50f7e0e9c3722946
+
+
+
+
+      
